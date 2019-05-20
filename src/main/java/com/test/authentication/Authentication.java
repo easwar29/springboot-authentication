@@ -11,12 +11,12 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @RestController
 public class Authentication {
 
-    @RequestMapping(value = "/login", method = POST)
+    @RequestMapping(value = "/auth/login", method = POST)
     public LoginResponse login() {
         return new LoginResponse(UUID.randomUUID().toString());
     }
 
-    @RequestMapping(value = "/logout", method = POST)
+    @RequestMapping(value = "/auth/logout", method = POST)
     public LoginResponse logout() {
         return new LoginResponse("");
     }
